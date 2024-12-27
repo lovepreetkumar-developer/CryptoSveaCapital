@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="callback"
+            type="com.svea.app.base.BaseCallback" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/partial_toolbar_back"
+            app:callback="@{callback}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_c_type"
+                    style="@style/CustomTextViewRegular"
+                    android:text="€"
+                    android:textColor="#074CA8"
+                    android:textSize="@dimen/_50sdp" />
+
+                <TextView
+                    android:id="@+id/text_amount"
+                    android:layout_toEndOf="@+id/text_c_type"
+                    style="@style/CustomTextViewRegular"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:text="0"
+                    android:maxLength="6"
+                    android:textColor="#074CA8"
+                    android:textSize="@dimen/_50sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_button_red_trans"
+                android:backgroundTint="#EDF6FD"
+                android:paddingStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_4sdp">
+
+                <ImageView
+                    android:id="@+id/image_time"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:tint="#074CA8"
+                    app:srcCompat="@drawable/ic_time"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    style="@style/CustomTextViewBold"
+                    android:layout_toEndOf="@+id/image_time"
+                    android:text="One-time purchase"
+                    android:textColor="#074CA8"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button_preview_buy"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:background="@color/colorGrayLight" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/image_plus"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:tint="#074CA8"
+                    app:srcCompat="@drawable/ic_plus"
+                    tools:ignore="ContentDescription" />
+
+                <EditText
+                    style="@style/CustomEditText"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_toStartOf="@+id/button_add"
+                    android:layout_toEndOf="@+id/image_plus"
+                    android:ellipsize="end"
+                    android:enabled="false"
+                    android:hint="Add a payment method"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_12sdp" />
+
+                <Button
+                    android:id="@+id/button_add"
+                    style="@style/CustomButton"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_round_button_green_less"
+                    android:onClick="@{(v)->callback.onClick(v)}"
+                    android:text="Add"
+                    android:textSize="@dimen/_10sdp" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:background="@color/colorGrayLight" />
+
+            <TableLayout
+                android:id="@+id/keyboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:divider="@drawable/keyboard_divider"
+                android:orientation="vertical"
+                android:showDividers="beginning|middle|end">
+
+                <TableRow style="@style/keyboard_row">
+
+                    <TextView
+                        android:id="@+id/t9_key_1"
+                        style="@style/keyboard_number_button"
+                        android:onClick="@{(v)->callback.onClick(v)}"
+                        android:text="@string/number_one" />
+
+                    <TextView
+                        android:id="@+id/t9_key_2"
+                        android:onClick="@{(v)->callback.onClick(v)}"
+                        style="@style/keyboard_number_button"
+                        android:text="@string/number_two" />
+
+                    <TextView
+                        android:id="@+id/t9_key_3"
+                        android:onClick="@{(v)->callback.onClick(v)}"
+                        style="@style/keyboard_number_button"
+                        android:text="@string/number_three" />
+                </TableRow>
+
+                <TableRow style="@style/keyboard_row">
+
+                    <TextView
+                        android:id="@+id/t9_key_4"
+                        android:onClick="@{(v)->callback.onClick(v)}"
+                        style="@style/keyboard_number_button"
+                        android:text="@string/number_four" />
+
+                    <TextView
+                        android:id="@+id/t9_key_5"
+                        android:onClick="@{(v)->callback.onClick(v)}"
+                        style="@style/keyboard_number_button"
+                        android:text="@string/number_five" />
+
+                    <TextView
+                        android:id="@+id/t9_key_6"
+                        android:onClick="@{(v)->callback.onClick(v)}"
+                        style="@style/keyboard_number_button"
+                        android:text="@string/number_six" />
+                </TableRow>
+
+                <TableRow style="@style/keyboard_row">
+
+                    <TextView
+                        android:id="@+id/t9_key_7"
+                        android:onClick="@{(v)->callback.onClick(v)}"
+                        style="@style/keyboard_number_button"
+                        android:text="@string/number_seven" />
+
+                    <TextView
+                        android:id="@+id/t9_key_8"
+                        android:onClick="@{(v)->callback.onClick(v)}"
+                        style="@style/keyboard_number_button"
+                        android:text="@string/number_eight" />
+
+                    <TextView
+                        android:id="@+id/t9_key_9"
+                        android:onClick="@{(v)->callback.onClick(v)}"
+                        style="@style/keyboard_number_button"
+                        android:text="@string/number_nine" />
+                </TableRow>
+
+                <TableRow style="@style/keyboard_row">
+
+                    <TextView
+                        android:id="@+id/t9_key_clear"
+                        style="@style/keyboard_button"
+                        android:text="@string/btn_clear"
+                        android:onClick="@{(v)->callback.onClick(v)}"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <TextView
+                        android:id="@+id/t9_key_0"
+                        android:onClick="@{(v)->callback.onClick(v)}"
+                        style="@style/keyboard_number_button"
+                        android:text="@string/number_zero" />
+
+                    <TextView
+                        android:onClick="@{(v)->callback.onClick(v)}"
+                        android:id="@+id/t9_key_backspace"
+                        style="@style/keyboard_button"
+                        android:text="@string/btn_backspace"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_preview_buy"
+            style="@style/CustomButton"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:onClick="@{(v)->callback.onClick(v)}"
+            android:text="Preview Buy" />
+
+    </RelativeLayout>
+
+</layout>

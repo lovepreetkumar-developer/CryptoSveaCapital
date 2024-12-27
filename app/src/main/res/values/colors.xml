@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#0F4660</color>
+    <color name="colorPrimaryDark">#0F4660</color>
+    <color name="colorAccent">#68A7C5</color>
+    <color name="green">#51ad89</color>
+    <color name="green_light">#86FFCE</color>
+    <color name="dark_green">#257e54</color>
+    <color name="white">#ffffff</color>
+    <color name="grey_light">#CCC8C8</color>
+    <color name="grey">#484848</color>
+    <color name="grey_dark">#323232</color>
+    <color name="grey_light_more">#909090</color>
+    <color name="shadow">#d0d8dc</color>
+    <color name="color_grey_dark">#34383C</color>
+    <color name="light_gray">#dbdbdb</color>
+    <color name="bottom_sview_elected">#212121</color>
+    <color name="black">#1A1A1A</color>
+    <color name="yellow">#FFA834</color>
+    <color name="green_divider">#a4a4a4</color>
+    <color name="transparent">#00FFFDFD</color>
+    <color name="light_grey">#848484</color>
+    <color name="blue">#406084</color>
+    <color name="red">#F51F1F</color>
+    <color name="yellow_dark">#F9911F</color>
+    <color name="red_light">#FD0032</color>
+
+    <color name="colorEditTextHint">#4E565C</color>
+    <color name="colorButtonBlueTransparent">#0B314D</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlackShade">#0E171D</color>
+    <color name="colorGrayLight">#F3F3F3</color>
+    <color name="colorGrayDark">#7B7B7B</color>
+    <color name="colorGreenLight">#339A72</color>
+    <color name="colorGreySetting">#DCDCDC</color>
+
+</resources>

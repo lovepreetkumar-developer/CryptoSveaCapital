@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="callback"
+            type="com.svea.app.base.BaseCallback" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <LinearLayout
+                android:id="@+id/linear_details"
+                android:layout_width="wrap_content"
+                android:minWidth="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/CustomTextViewRegular"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="Portfolio Balance"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="#8C959D"/>
+
+                <TextView
+                    android:id="@+id/text_wallet_amount"
+                    style="@style/CustomTextViewMedium"
+                    android:text="€ 0.00"
+                    android:textColorLink="@color/colorBlack"
+                    android:textSize="@dimen/_14sdp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                app:srcCompat="@drawable/ic_bell"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            style="@style/CustomTextViewMedium"
+            android:text="Market"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textColorLink="@color/colorBlack"
+            android:textSize="@dimen/_14sdp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/colorGrayLight"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_watch_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            style="@style/MyStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            android:visibility="gone"
+            app:tabTextColor="@color/black"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextAppearance="@style/MyCustomTabText"
+            app:tabMode="fixed" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</layout>

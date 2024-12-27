@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="callback"
+            type="com.svea.app.base.SimpleRecyclerViewAdapter.SimpleCallback" />
+
+        <variable
+            name="bean"
+            type="com.svea.app.beans.WatchListBean" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingTop="@dimen/_3sdp"
+        android:paddingBottom="@dimen/_3sdp"
+        android:onClick="@{(v)->callback.onClick(v,bean)}">
+
+        <LinearLayout
+            android:id="@+id/linear_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/image_logo"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                app:srcCompat="@drawable/ic_etherum"
+                app:simpleResourse="@{bean.icon}"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/text_name"
+                style="@style/CustomTextViewRegular"
+                android:textColor="#5F5F5F"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:text="@{bean.heading}"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/image_chart"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/image_chart_dummy"
+            android:layout_below="@+id/linear_name"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:id="@+id/linear_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/CustomTextViewBold"
+                    android:textColor="#5F5F5F"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_toStartOf="@+id/text_c_type"
+                    android:text="@{bean.price}"/>
+
+                <TextView
+                    android:id="@+id/text_c_type"
+                    style="@style/CustomTextViewBold"
+                    android:textColor="#5F5F5F"
+                    android:layout_alignParentEnd="true"
+                    android:text="$" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/CustomTextViewRegular"
+                android:textColor="@color/green"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingTop="@dimen/_2sdp"
+                android:textSize="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@drawable/bg_round_button_green_trans"
+                android:text="-168.40 $ (-0,43 %)" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:background="@color/colorGrayDark"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_below="@+id/image_chart"/>
+
+    </RelativeLayout>
+
+</layout>
+

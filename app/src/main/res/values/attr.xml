@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RotateLoading">
+        <attr name="loading_width" format="dimension" />
+        <attr name="loading_color" format="color" />
+        <attr name="shadow_position" format="integer" />
+        <attr name="loading_speed" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="MyCustomTextView">
+        <attr name="fontName" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="RecyclerViewBouncy">
+        <attr name="tension" format="integer" />
+        <attr name="friction" format="integer" />
+        <attr name="speedFactor" format="integer" />
+        <attr name="gapLimit" format="integer" />
+        <attr name="viewCountEstimateSize" format="integer" />
+        <attr name="maxAdapterSizeToEstimate" format="integer" />
+    </declare-styleable>
+
+
+</resources>

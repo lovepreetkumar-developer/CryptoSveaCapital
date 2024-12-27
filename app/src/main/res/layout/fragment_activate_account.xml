@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="callback"
+            type="com.svea.app.base.BaseCallback" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/partial_toolbar_home"
+            android:id="@+id/toolbar"
+            app:callback="@{callback}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_below="@+id/toolbar">
+
+            <TextView
+                style="@style/CustomTextViewBold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:text="Activate your account"/>
+
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_margin="@dimen/_15sdp"
+                android:src="@drawable/image_activate_account"/>
+
+            <TextView
+                style="@style/CustomTextViewRegular"
+                android:textColor="#BCBCBC"
+                android:text="You need to get verify before you can buy crypto"/>
+
+            <Button
+                android:id="@+id/button_start"
+                style="@style/CustomButton"
+                android:text="Start"
+                android:background="@drawable/bg_round_button_green"
+                android:layout_margin="@dimen/_25sdp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

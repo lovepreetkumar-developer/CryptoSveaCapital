@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="callback"
+            type="com.svea.app.base.BaseCallback" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:targetApi="lollipop">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_7sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_title"
+                style="@style/CustomTextViewMedium"
+                android:padding="@dimen/_10sdp"
+                android:text="WatchList"
+                android:textColorLink="@color/colorBlack"
+                android:textSize="@dimen/_14sdp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/image_log_out"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    app:srcCompat="@drawable/ic_logout"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/text_log_out"
+                    style="@style/CustomTextViewRegular"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/image_log_out"
+                    android:text="Logout"
+                    android:textColorLink="@color/colorBlack" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/colorGrayLight"/>
+
+    </LinearLayout>
+
+</layout>

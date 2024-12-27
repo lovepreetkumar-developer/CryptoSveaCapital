@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="callback"
+            type="com.svea.app.base.BaseCallback" />
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <!--
+                <include
+                    android:id="@+id/toolbar"
+                    layout="@layout/partial_toolbar"
+                    android:visibility="gone"
+                    app:callback="@{callback}" />
+        -->
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/view" />
+
+        <!--
+            android:layout_below="@+id/toolbar"-->
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_above="@+id/frame_bottom_menus"
+            android:background="@color/light_gray" />
+
+        <FrameLayout
+            android:id="@+id/frame_bottom_menus"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/image_app_logo"
+                android:onClick="@{(v)->callback.onClick(v)}"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:src="@drawable/image_app_icon"
+                android:layout_gravity="center_horizontal"
+                tools:ignore="ContentDescription" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_menus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                app:itemIconTint="@color/bottom_menu_selector"
+                app:labelVisibilityMode="labeled"
+                app:menu="@menu/home_menu" />
+
+
+        </FrameLayout>
+
+<!--        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/fl_page_home"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_home" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="32dp"
+                    android:text="your text" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_page_dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="your drawable" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="32dp"
+                    android:text="your text" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_page_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="your drawable" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="32dp"
+                    android:text="your text" />
+
+            </FrameLayout>
+
+        </LinearLayout>-->
+
+    </RelativeLayout>
+
+</layout>

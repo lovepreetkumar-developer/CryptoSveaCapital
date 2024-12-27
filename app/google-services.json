@@ -1,0 +1,51 @@
+{
+  "project_info": {
+    "project_number": "855235698050",
+    "firebase_url": "https://svea-capital.firebaseio.com",
+    "project_id": "svea-capital",
+    "storage_bucket": "svea-capital.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855235698050:android:2728564d26ea97b825439b",
+        "android_client_info": {
+          "package_name": "com.svea.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855235698050-pdpj6rq3uv15r58p9dfl526tk66rsq6p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.svea.app",
+            "certificate_hash": "e3bfb6e6d2384705f78f051fcf4c1c7e6464875a"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPMxi_JUwWKLM_KldcGtgRJeNEd4epgHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855235698050-nd0a6g50p7ljkq9stsrj57fbmf67ahfq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "855235698050-j26b5pcndg49kmduoeafnoobibqq6c37.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "svea.capital.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

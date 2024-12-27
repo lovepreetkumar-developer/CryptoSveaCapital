@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home"
+        android:checked="true"
+        android:icon="@drawable/ic_home"
+        android:title="" />
+
+    <item
+        android:id="@+id/menu_wallet"
+        android:icon="@drawable/ic_wallet"
+        android:title="" />
+
+    <item
+        android:id="@+id/menu_add"
+        android:title=""/>
+
+
+    <item
+        android:id="@+id/menu_trade_view"
+        android:icon="@drawable/ic_trade_view"
+        android:title="" />
+
+    <item
+        android:id="@+id/menu_settings"
+        android:icon="@drawable/ic_user"
+        android:title="" />
+
+</menu>
